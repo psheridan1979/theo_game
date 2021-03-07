@@ -14,28 +14,36 @@ func _process(delta):
 	var velocity = Vector2.ZERO # The player's movement vector.
 	var last_input = ""
 	if Input.is_action_pressed("move_right"):
-		velocity.x += 1
+		velocity.x = 1
 		last_input = "r"
-	if Input.is_action_pressed("move_left"):
-		velocity.x -= 1
+	elif Input.is_action_pressed("move_left"):
+		velocity.x =  -1
 		last_input = "l"
-	if Input.is_action_pressed("move_down"):
-		velocity.y += 1
+	elif  Input.is_action_pressed("move_down"):
+		velocity.y = 1
 		last_input = "d"
-	if Input.is_action_pressed("move_up"):
-		velocity.y -= 1
+	elif  Input.is_action_pressed("move_up"):
+		velocity.y = -1
 		last_input = "u"
 
+	
 	if velocity.length() > 0:
+		#print (velocity)
 		velocity = velocity.normalized() * speed
 		#$AnimatedSprite.play()
-		$AnimatedSprite.play("walk" + "_" + last_input)
+		if !$AnimatedSprite.is_playing():
+			$AnimatedSprite.play("walk" + "_" + last_input)
 	else:
+		$AnimatedSprite.stop()
 		$AnimatedSprite.play("idle" + "_" + last_input)
+		print ("idle")
+
+
 
 	position += velocity * delta
 	position.x = clamp(position.x, 0, screen_size.x)
 	position.y = clamp(position.y, 0, screen_size.y)
+
 
 #	if velocity.x != 0:
 #		$AnimatedSprite.animation = "right"
