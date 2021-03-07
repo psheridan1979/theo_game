@@ -124,5 +124,5 @@ shape = SubResource( 14 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-zoom = Vector2( 2, 2 )
+zoom = Vector2( 1.5, 1.5 )
 [connection signal="body_entered" from="." to="." method="_on_Player_body_entered"]
