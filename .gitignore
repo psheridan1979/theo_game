@@ -1,2 +1,6 @@
 .import
 logs/
+*.zip
+*.rar
+.DS_Store
+*.gif
