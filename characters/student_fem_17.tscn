@@ -95,8 +95,8 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=14]
-radius = 77.0
-height = 109.674
+radius = 24.7
+height = 24.474
 
 [node name="Player" type="Area2D"]
 position = Vector2( 1.5, 0 )
@@ -108,7 +108,7 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 1.25, -0.250016 )
-scale = Vector2( 6.01562, 6.23438 )
+scale = Vector2( 2, 2 )
 frames = SubResource( 13 )
 animation = "idle_d"
 playing = true
@@ -121,4 +121,8 @@ shape = SubResource( 14 )
 [node name="Idle" type="Node" parent="State Machine"]
 
 [node name="Walk" type="Node" parent="State Machine"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 2, 2 )
 [connection signal="body_entered" from="." to="." method="_on_Player_body_entered"]

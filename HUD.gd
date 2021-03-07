@@ -5,7 +5,7 @@ signal start_game
 func show_message(text):
 	$MessageLabel.text = text
 	$MessageLabel.show()
-	$MessageTimer.start()
+	#$MessageTimer.start()
 
 
 func show_game_over():
@@ -17,8 +17,8 @@ func show_game_over():
 	$StartButton.show()
 
 
-func update_score(score):
-	$ScoreLabel.text = str(score)
+#func update_score(score):
+#	$ScoreLabel.text = str(score)
 
 
 func _on_StartButton_pressed():
