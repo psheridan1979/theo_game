@@ -1,23 +1,23 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/Japanese school characters/school uniform 1/su1 Student fmale 17.png" type="Texture" id=2]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 2 )
-region = Rect2( 32, 96, 32, 32 )
+region = Rect2( 0, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 2 )
-region = Rect2( 0, 96, 32, 32 )
+region = Rect2( 32, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 2 )
-region = Rect2( 64, 96, 32, 32 )
+region = Rect2( 64, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 2 )
-region = Rect2( 32, 0, 32, 32 )
+region = Rect2( 0, 64, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 2 )
@@ -25,47 +25,57 @@ region = Rect2( 32, 64, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 2 )
-region = Rect2( 0, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 2 )
-region = Rect2( 32, 32, 32, 32 )
+region = Rect2( 64, 64, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 2 )
-region = Rect2( 64, 32, 32, 32 )
+region = Rect2( 0, 96, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 2 )
+region = Rect2( 32, 96, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 32, 32 )
+region = Rect2( 64, 96, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 2 )
-region = Rect2( 64, 0, 32, 32 )
+region = Rect2( 32, 32, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 2 )
-region = Rect2( 0, 64, 32, 32 )
+region = Rect2( 0, 32, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=12]
 atlas = ExtResource( 2 )
-region = Rect2( 64, 64, 32, 32 )
+region = Rect2( 64, 32, 32, 32 )
 
 [sub_resource type="SpriteFrames" id=13]
 animations = [ {
-"frames": [ SubResource( 1 ) ],
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
 "loop": true,
-"name": "idle_u",
+"name": "walk_d",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 2 ), SubResource( 1 ), SubResource( 3 ) ],
+"frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
+"loop": true,
+"name": "walk_r",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
 "loop": true,
 "name": "walk_u",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 4 ) ],
+"frames": [ SubResource( 8 ) ],
 "loop": true,
-"name": "idle_d",
+"name": "idle_u",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 10 ) ],
+"loop": true,
+"name": "idle_l",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 5 ) ],
@@ -73,52 +83,20 @@ animations = [ {
 "name": "idle_r",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 6 ), SubResource( 8 ), SubResource( 7 ) ],
+"frames": [ SubResource( 11 ), SubResource( 10 ), SubResource( 12 ) ],
 "loop": true,
 "name": "walk_l",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 8 ) ],
+"frames": [ SubResource( 2 ) ],
 "loop": true,
-"name": "idle_l",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 9 ), SubResource( 4 ), SubResource( 10 ) ],
-"loop": true,
-"name": "walk_d",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 11 ), SubResource( 5 ), SubResource( 12 ) ],
-"loop": true,
-"name": "walk_r",
+"name": "idle_d",
 "speed": 5.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=14]
 radius = 77.0
-height = 68.674
-
-[sub_resource type="Gradient" id=15]
-colors = PoolColorArray( 1, 1, 1, 0.501961, 1, 1, 1, 0 )
-
-[sub_resource type="GradientTexture" id=16]
-gradient = SubResource( 15 )
-
-[sub_resource type="Curve" id=17]
-_data = [ Vector2( 0.00501098, 0.5 ), 0.0, 0.0, 0, 0, Vector2( 0.994989, 0.324 ), 0.0, 0.0, 0, 0 ]
-
-[sub_resource type="CurveTexture" id=18]
-curve = SubResource( 17 )
-
-[sub_resource type="ParticlesMaterial" id=19]
-flag_disable_z = true
-gravity = Vector3( 0, 0, 0 )
-initial_velocity = 1.0
-orbit_velocity = 0.0
-orbit_velocity_random = 0.0
-scale = 0.75
-scale_curve = SubResource( 18 )
-color_ramp = SubResource( 16 )
+height = 109.674
 
 [node name="Player" type="Area2D"]
 position = Vector2( 1.5, 0 )
@@ -137,14 +115,6 @@ playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 14 )
-
-[node name="Trail" type="Particles2D" parent="."]
-z_index = -1
-amount = 10
-speed_scale = 2.0
-local_coords = false
-process_material = SubResource( 19 )
-texture = ExtResource( 5 )
 
 [node name="State Machine" type="Node" parent="."]
 

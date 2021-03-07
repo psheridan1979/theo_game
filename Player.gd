@@ -30,9 +30,8 @@ func _process(delta):
 	if velocity.length() > 0:
 		#print (velocity)
 		velocity = velocity.normalized() * speed
-		#$AnimatedSprite.play()
-		if !$AnimatedSprite.is_playing():
-			$AnimatedSprite.play("walk" + "_" + last_input)
+
+		$AnimatedSprite.play("walk" + "_" + last_input)
 	else:
 		$AnimatedSprite.stop()
 		$AnimatedSprite.play("idle" + "_" + last_input)
