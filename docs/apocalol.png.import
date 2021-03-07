@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/apocalol.png-c01c6a90edabbaa4fc17c08fc076527c.stex"
+path="res://.import/apocalol.png-5ef305eae1a05dbf1f2943204e12f613.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://export/apocalol.png"
-dest_files=[ "res://.import/apocalol.png-c01c6a90edabbaa4fc17c08fc076527c.stex" ]
+source_file="res://docs/apocalol.png"
+dest_files=[ "res://.import/apocalol.png-5ef305eae1a05dbf1f2943204e12f613.stex" ]
 
 [params]
 
