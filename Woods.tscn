@@ -1,39 +1,21 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://TileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/top-down-collection-pack/Topview Fantasy Patreon Collection/Top-Down-Forest/PNG/top-down-forest-tileset.png" type="Texture" id=2]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 
-[sub_resource type="OpenSimplexNoise" id=4]
+[sub_resource type="OpenSimplexNoise" id=8]
 octaves = 5
 
-[sub_resource type="NoiseTexture" id=5]
+[sub_resource type="NoiseTexture" id=9]
 seamless = true
-noise = SubResource( 4 )
+noise = SubResource( 8 )
 
-[sub_resource type="OccluderPolygon2D" id=6]
-polygon = PoolVector2Array( 24.5199, 2.28162, 11.9612, 9.53775, 4.42599, 17.352, 3.58871, 30.1898, 11.6821, 37.4459, 22.2872, 38.0041, 19.2173, 43.0275, 25.3571, 46.3765, 30.6596, 44.1439, 29.5433, 38.8413, 45.7301, 29.3525, 45.7301, 18.1893, 35.125, 6.18875 )
-
-[sub_resource type="ConvexPolygonShape2D" id=7]
-points = PoolVector2Array( 28.427, 38.8413, 32.055, 42.7484, 27.5898, 45.8184, 18.101, 43.8648, 21.729, 39.6786 )
-
-[sub_resource type="OccluderPolygon2D" id=8]
-polygon = PoolVector2Array( 23.4035, 2.74948, 10.5658, 16.7036, 5.26321, 27.0296, 5.54233, 35.402, 12.2403, 40.7046, 21.1709, 39.0301, 20.6127, 44.0536, 27.0316, 45.728, 30.3806, 41.8209, 29.5433, 38.751, 42.3811, 37.9138, 42.102, 26.4714, 43.7765, 23.6806 )
-
-[sub_resource type="ConvexPolygonShape2D" id=9]
-points = PoolVector2Array( 23.1244, 38.1928, 27.3106, 39.0301, 28.7061, 44.6117, 23.9617, 47.4025, 20.8918, 42.9372 )
-
-[sub_resource type="OccluderPolygon2D" id=10]
-polygon = PoolVector2Array( 11.0336, 7.21274, 7.68466, 12.5153, 20.8015, 12.2362, 18.5688, 7.21274 )
-
-[sub_resource type="ConvexPolygonShape2D" id=11]
-points = PoolVector2Array( 21.3596, 12.5153, 27.2204, 15.8643, 25.8249, 21.725, 19.127, 24.7949, 8.24283, 25.3531, 6.28922, 20.6087, 5.452, 14.4689 )
-
-[sub_resource type="TileSet" id=3]
+[sub_resource type="TileSet" id=13]
 0/name = "grass auto"
 0/texture = ExtResource( 2 )
-0/normal_map = SubResource( 5 )
+0/normal_map = SubResource( 9 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 128, 32, 16, 16 )
@@ -118,20 +100,12 @@ points = PoolVector2Array( 21.3596, 12.5153, 27.2204, 15.8643, 25.8249, 21.725, 
 5/region = Rect2( 160, 48, 48, 48 )
 5/tile_mode = 0
 5/occluder_offset = Vector2( 0, 0 )
-5/occluder = SubResource( 6 )
 5/navigation_offset = Vector2( 0, 0 )
 5/shape_offset = Vector2( 0, 0 )
 5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape = SubResource( 7 )
 5/shape_one_way = false
-5/shape_one_way_margin = 1.0
-5/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 7 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
 5/z_index = 1
 6/name = "tree_2"
 6/texture = ExtResource( 2 )
@@ -140,20 +114,12 @@ points = PoolVector2Array( 21.3596, 12.5153, 27.2204, 15.8643, 25.8249, 21.725, 
 6/region = Rect2( 160, 112, 48, 48 )
 6/tile_mode = 0
 6/occluder_offset = Vector2( 0, 0 )
-6/occluder = SubResource( 8 )
 6/navigation_offset = Vector2( 0, 0 )
 6/shape_offset = Vector2( 0, 0 )
 6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-6/shape = SubResource( 9 )
 6/shape_one_way = false
-6/shape_one_way_margin = 1.0
-6/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 9 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
 6/z_index = 0
 7/name = "boulder_1"
 7/texture = ExtResource( 2 )
@@ -162,20 +128,12 @@ points = PoolVector2Array( 21.3596, 12.5153, 27.2204, 15.8643, 25.8249, 21.725, 
 7/region = Rect2( 224, 64, 32, 32 )
 7/tile_mode = 0
 7/occluder_offset = Vector2( 0, 0 )
-7/occluder = SubResource( 10 )
 7/navigation_offset = Vector2( 0, 0 )
 7/shape_offset = Vector2( 0, 0 )
 7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-7/shape = SubResource( 11 )
 7/shape_one_way = false
-7/shape_one_way_margin = 1.0
-7/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 11 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
 7/z_index = 0
 8/name = "bush_2"
 8/texture = ExtResource( 2 )
@@ -216,23 +174,24 @@ points = PoolVector2Array( 21.3596, 12.5153, 27.2204, 15.8643, 25.8249, 21.725, 
 9/z_index = 1
 
 [node name="CanvasLayer" type="CanvasLayer"]
-scale = Vector2( 5, 5 )
-transform = Transform2D( 5, 0, 0, 5, 0, 0 )
 follow_viewport_enable = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 follow_viewport_enable = true
 
 [node name="TileMap" parent="." instance=ExtResource( 1 )]
+centered_textures = false
 
 [node name="TileMap2" type="TileMap" parent="."]
 material = SubResource( 1 )
 position = Vector2( 1, 0 )
-tile_set = SubResource( 3 )
+tile_set = SubResource( 13 )
 cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
 centered_textures = true
+occluder_light_mask = 3075
 format = 1
-tile_data = PoolIntArray( -655365, 0, 0, -655364, 0, 0, -655363, 0, 0, -655362, 0, 0, -655361, 0, 0, -720896, 0, 0, -720895, 0, 0, -589837, 6, 0, -589829, 0, 0, -589828, 0, 0, -589827, 0, 0, -589826, 0, 0, -589825, 0, 0, -655360, 0, 0, -655359, 0, 0, -524293, 0, 0, -524292, 0, 0, -524291, 0, 0, -524290, 0, 0, -524289, 0, 0, -589824, 0, 0, -589823, 0, 0, -589815, 5, 0, -458763, 4, 0, -458757, 0, 0, -458756, 0, 0, -458755, 0, 0, -458754, 0, 0, -458753, 0, 0, -524288, 0, 0, -524287, 0, 0, -524281, 0, 0, -393221, 0, 0, -393220, 0, 0, -393219, 0, 0, -393218, 0, 0, -393217, 0, 0, -458752, 0, 0, -458751, 0, 0, -458746, 4, 0, -327687, 8, 0, -327685, 0, 0, -327684, 0, 0, -327683, 0, 0, -327682, 0, 0, -327681, 0, 0, -393216, 0, 0, -393215, 0, 0, -393212, 8, 0, -262152, 7, 0, -327670, 6, 0, -131076, 4, 0, -196606, 5, 0, -12, 2, 0, -4, 6, 0, -65527, 8, 0, 65521, 4, 0, 131065, 5, 0, 65541, 6, 0, 131073, 6, 0, 131082, 1, 0, 262136, 7, 0, 262139, 6, 0, 327671, 3, 0, 262150, 8, 0, 327683, 8, 0, 393226, 6, 0, 589818, 6, 0, 655354, 6, 0, 589834, 4, 0, 720885, 1, 0, 720893, 5, 0, 851961, 8, 0, 851965, 7, 0, 786436, 7, 0, 983029, 5, 0, 917515, 2, 0, 983045, 5, 0, 983049, 3, 0 )
+tile_data = PoolIntArray( -3145741, 3, 0, -2490365, 3, 0, -2359277, 8, 0, -2293741, 8, 0, -2228206, 8, 0, -2162671, 8, 0, -2097136, 8, 0, -2031601, 8, 0, -1966065, 8, 0, -1900531, 8, 0, -1900530, 8, 0, -1834995, 8, 0, -1638389, 3, 0, -655365, 0, 0, -655364, 0, 0, -655363, 0, 0, -655362, 0, 0, -655361, 0, 0, -720896, 0, 0, -720895, 0, 0, -589837, 6, 0, -589829, 0, 0, -589828, 0, 0, -589827, 0, 0, -589826, 0, 0, -589825, 0, 0, -655360, 0, 0, -655359, 0, 0, -524293, 0, 0, -524292, 0, 0, -524291, 0, 0, -524290, 0, 0, -524289, 0, 0, -589824, 0, 0, -589823, 0, 0, -589815, 5, 0, -458763, 4, 0, -458757, 0, 0, -458756, 0, 0, -458755, 0, 0, -458754, 0, 0, -458753, 0, 0, -524288, 0, 0, -524287, 0, 0, -524281, 0, 0, -393221, 0, 0, -393220, 0, 0, -393219, 0, 0, -393218, 0, 0, -393217, 0, 0, -458752, 0, 0, -458751, 0, 0, -458746, 4, 0, -327687, 8, 0, -327685, 0, 0, -327684, 0, 0, -327683, 0, 0, -327682, 0, 0, -327681, 0, 0, -393216, 0, 0, -393215, 0, 0, -393212, 8, 0, -262152, 7, 0, -262147, 3, 0, -327670, 6, 0, -131076, 4, 0, -196606, 5, 0, -12, 2, 0, -4, 6, 0, -65527, 8, 0, 65521, 4, 0, 131065, 5, 0, 65541, 6, 0, 131073, 6, 0, 131082, 1, 0, 262136, 7, 0, 262139, 6, 0, 327671, 3, 0, 262150, 8, 0, 327683, 8, 0, 393226, 6, 0, 589818, 6, 0, 655354, 6, 0, 589834, 4, 0, 720885, 1, 0, 720893, 5, 0, 851961, 8, 0, 851965, 7, 0, 786436, 7, 0, 983029, 5, 0, 917515, 2, 0, 983045, 5, 0, 983047, 6, 0, 983048, 6, 0, 983049, 3, 0, 1376276, 3, 0, 1703926, 3, 0, 2293765, 3, 0, 4784132, 6, 0 )
 __meta__ = {
 "_editor_description_": ""
 }
