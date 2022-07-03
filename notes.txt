@@ -1,0 +1,29 @@
+Notes
+-Marriage is possible
+-Relationships (friends, enemies, lovers)
+-different activities, events, and dialogue options affect what kind of relationships you have
+-Farming, mining, fishing, monster fighting, resource gathering
+-different people perform different services 
+-boss battles in every new area
+-monsters roam the world (different kinds for each area) 
+-randomized villagers: the villagers you can get will be randomized for each playthrough, there will be set villagers for every playthrough and the rest will be randomized (some will be rarer than others) 
+-pets (like common animals only slightly mutated, harmless and not helpful, but cute and nice to look at. They’ll roam your town and home)
+-as you progress in the game, you’ll build up your town (it also becomes nicer on its own as you gain villagers) 
+-large turtles float in the river that have trading posts and houses on them. You can interact with the people who live on them
+-spider follows you on the underside of the glass while in the glass desert 
+-fixed npcs: blacksmith, shop owner, miner, boat captain, train driver 
+
+Areas and bosses
+Area 1-bunker and trash heap
+Boss: Trash worm 
+
+Area 2-forest and river 
+Boss: some kind of mutated forest animal (deer??) 
+
+Area 3-mountain and the mines
+Boss: giant bird thing maybe?
+
+Area 4-glass desert 
+Boss: giant spider
+
+Area 5-turtle island
